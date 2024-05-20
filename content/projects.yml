@@ -1,0 +1,8 @@
+- order: 0
+  name: Quick chess
+  description: A simple chess game
+  icon: android/blueprint.png
+  # preview: android/blueprint-preview.png
+  url: https://github.com/bjorndonald/chessgame/
+  color: "#4d8af0"
+  repo: Chess Game
