@@ -23,8 +23,7 @@ export default defineConfig({
             rehypeAccessibleEmojis,
             // @ts-expect-error idk
             prettyCode,
-            [rehypeAutolinkHeadings, , { properties: { className: ['anchor'] } }],
-            { className: ['anchor'] },
+            [rehypeAutolinkHeadings, { properties: { className: ['anchor'] } }],
             toc
         ]
     }

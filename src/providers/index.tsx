@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { ThemeProvider as NextThemeProvider } from 'next-themes';
-import { type PropsWithChildren } from 'react';
+import { ThemeProvider as NextThemeProvider } from "next-themes";
+import { type PropsWithChildren } from "react";
 
-import { ThemeProvider } from './theme-providers';
+import { ThemeProvider } from "./theme-providers";
 
 export function Providers(props: PropsWithChildren) {
-    return (
-        <NextThemeProvider
-            attribute={'class'}
-            defaultTheme={'system'}
-            enableColorScheme
-            disableTransitionOnChange
-        >
-            <ThemeProvider>{props.children}</ThemeProvider>
-        </NextThemeProvider>
-    );
+  return (
+    <NextThemeProvider
+      attribute={"class"}
+      defaultTheme={"system"}
+      enableColorScheme
+      disableTransitionOnChange
+    >
+      <ThemeProvider>{props.children}</ThemeProvider>
+    </NextThemeProvider>
+  );
 }

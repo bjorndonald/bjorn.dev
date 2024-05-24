@@ -14,15 +14,15 @@ const withBundleAnalyzer = bundleAnalyzer({
 /** @type {import('next').NextConfig} */
 
 const defaultNextConfig = {
-    swxMinify: true,
+    swcMinify: true,
     reactStrictMode: true,
     compress: true,
     crossOrigin: 'anonymous',
-    experimental: {
-        ppr: true,
-        // useLightningcss: true,
-        // optimizePackageImports: ['react-tweet'],
-    },
+    // experimental: {
+    //     // ppr: true,
+    //     // useLightningcss: true,
+    //     // optimizePackageImports: ['react-tweet'],
+    // },
     compiler: {
         removeConsole: {
             exclude: ['error']

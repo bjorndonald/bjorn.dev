@@ -3,13 +3,13 @@
 
 echo "💻 Running pre-commit hook..."
 
-bun format || 
+bun format:fix || 
 (
     echo "🚨 Format failed.";
     false;
 )
 
-bun lint || 
+bun lint:fix || 
 (
     echo "🚨 Lint failed.";
     false;
