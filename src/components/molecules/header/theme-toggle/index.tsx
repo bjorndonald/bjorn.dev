@@ -4,7 +4,7 @@ import { useMemo } from "react";
 
 import { Icon } from "@/components/atoms/icon";
 import { loading } from "@/components/icons";
-import { useHasMounted } from "../use-has-mounted";
+import { useHasMounted } from "@/hooks/use-has-mounted";
 import { useTheme, type ThemeOption } from "@/providers/theme-providers";
 import cx from "@/utils/cx";
 

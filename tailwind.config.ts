@@ -40,7 +40,7 @@ const colors = [
   'secondary-txt',
   'tertiary-txt',
   'accent',
-  'accent-dark',
+  'accent-dark', 
   'on-accent'
 ]
 
@@ -62,7 +62,7 @@ const mappedColors = colors.map((color) => ({
 const config: Config = {
   darkMode: 'class',
   content: [
-    './content//**/*.{js,ts,jsx,tsx,mdx}',
+    './content/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
