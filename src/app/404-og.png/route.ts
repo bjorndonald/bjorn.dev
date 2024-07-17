@@ -1,7 +1,7 @@
-import { getOgImage } from '@/components/og/response';
+import { getOgImage } from "@/components/og/response";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
 export async function GET() {
-  return getOgImage('404');
+  return getOgImage("404");
 }

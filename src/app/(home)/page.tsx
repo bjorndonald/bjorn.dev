@@ -18,13 +18,15 @@ const jsonLd = JSON.stringify({
 });
 
 const HomePage = () => {
-  return <>
-  <Intro />
-  <FeaturedBlogPosts />
-    <script type="application/ld+json" suppressHydrationWarning>
-      {jsonLd}
-    </script>
-  </>;
+  return (
+    <>
+      <Intro />
+      <FeaturedBlogPosts />
+      <script type="application/ld+json" suppressHydrationWarning>
+        {jsonLd}
+      </script>
+    </>
+  );
 };
 
 export default HomePage;

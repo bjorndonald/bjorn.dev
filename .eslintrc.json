@@ -8,6 +8,7 @@
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "off",
     "object-curly-spacing": [
       2,
       "always"

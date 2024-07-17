@@ -1,12 +1,11 @@
 import { twc, type TWComponentProps } from "@/utils/cx";
 
+type ButtonProps = TWComponentProps<"button"> & { title: string };
 
-type ButtonProps = TWComponentProps<'button'> & {title: string}
-
-export const Button = twc.button.attrs<ButtonProps>((p) => ({
-    title: p.title,
-    'aria-label': p['aria-label'] || p.title,
-    type: p.type || 'button',
+export const Button = twc.button.attrs<ButtonProps>(p => ({
+  title: p.title,
+  "aria-label": p["aria-label"] || p.title,
+  type: p.type || "button",
 }))`
     border-none
     appearance-none
@@ -48,7 +47,7 @@ export const Button = twc.button.attrs<ButtonProps>((p) => ({
     after:border-white
     after:opacity-20
     after:[mask:linear-gradient(to_bottom,_rgba(0,_0,_0,_1)_0%,_rgba(0,_0,_0,_0)_100%)]
-`
+`;
 
 export const OutlinedButton = twc(Button)`
     bg-brand-200/5
@@ -69,4 +68,4 @@ export const OutlinedButton = twc(Button)`
     dark:after:opacity-15
     after:[mask:linear-gradient(to_bottom,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_1)_100%)]
     dark:after:[mask:linear-gradient(to_bottom,_rgba(0,_0,_0,_1)_0%,_rgba(0,_0,_0,_0)_100%)]
-`
+`;

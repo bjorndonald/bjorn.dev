@@ -37,11 +37,11 @@ const toolbarLinksList = [
     href: "/templates",
     className: "text-yellow",
   },
-  {
-    title: "Uses",
-    href: "/uses",
-    className: "text-blue",
-  },
+  // {
+  //   title: "Uses",
+  //   href: "/uses",
+  //   className: "text-blue",
+  // },
 ];
 
 interface NavbarProps extends TWComponentProps<typeof Nav> {

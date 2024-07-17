@@ -1,0 +1,17 @@
+[
+  {
+    "order": 0,
+    "name": "Furniro",
+    "description": "A furniture e-commerce template",
+    "icon": "web/furniro.png",
+    "url": "https://github.com/bjorndonald/furniro",
+    "color": "#B88E2F",
+    "hide": false,
+    "iconMeta": {
+      "width": 32,
+      "height": 32,
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4WAoAAAAQAAAABwAABwAAQUxQSEEAAAAAAAABAQEBAQAAABELBRUAAQEAfFs/kAQAADOAWlGBRQAHZXB5gG9tFFCZV4SUVY9pMFEKCgwFRj0AAAEAAAEAAABWUDggLAAAAJABAJ0BKggACAAMwM4lsAJ0APG4oADhlPxH0lXURg1OhVQtGE1YFwTdgYAA",
+      "placeholder": "blur"
+    }
+  }
+]

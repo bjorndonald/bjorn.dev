@@ -19,6 +19,11 @@
       "support"
     ],
     "readingTime": 4,
-    "heroMeta": null
+    "heroMeta": {
+      "width": 1280,
+      "height": 720,
+      "blurDataURL": "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAABwAQCdASoIAAUADMDOJYgCdAFAAAD+5VZaLbRnwAA=",
+      "placeholder": "blur"
+    }
   }
 ]

@@ -31,7 +31,7 @@ export const createMetadata = (data: {
       site: "@bjorncode",
     },
     verification: {
-      google: "",
+      google: "5dGov3wOzmzoRlXnlgF7labA8XSu4lcKUjHzZzWbmWc",
     },
     metadataBase: new URL("https://bjorncode.dev"),
   };

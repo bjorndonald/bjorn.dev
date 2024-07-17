@@ -1,7 +1,7 @@
-import { colord, extend } from 'colord';
-import a11yPlugin from 'colord/plugins/a11y';
+import { colord, extend } from "colord";
+import a11yPlugin from "colord/plugins/a11y";
 
-import { THEME_COLOR_DARK, THEME_COLOR_LIGHT } from '@/constants';
+import { THEME_COLOR_DARK, THEME_COLOR_LIGHT } from "@/constants";
 
 extend([a11yPlugin]);
 
@@ -13,7 +13,7 @@ export const getReadableColor = (
   let fgColor = colord(desiredFgColor);
   while (
     !fgColor.isReadable(isDark ? THEME_COLOR_DARK : THEME_COLOR_LIGHT, {
-      level: 'AAA',
+      level: "AAA",
     })
   ) {
     fgColor = isDark ? fgColor.lighten() : fgColor.darken();

@@ -1,8 +1,28 @@
 - order: 0
   name: Quick chess
   description: A simple chess game
-  icon: android/blueprint.png
-  # preview: android/blueprint-preview.png
-  url: https://github.com/bjorndonald/chessgame/
-  color: "#4d8af0"
-  repo: Chess Game
+  icon: web/quickchess.png
+  preview: web/quickchess-preview.png
+  url: https://github.com/bjorndonald/chess.dev
+  color: "#000000"
+  repo: chess.dev
+
+- order: 1
+  name: Tuniko
+  description: This is a platform that allows users to help each other with translations for languages not supported digitally
+  icon: web/tuniko.png
+  preview: web/tuniko-preview.png
+  url: https://github.com/bjorndonald/tuniko
+  color: "#0A85F7"
+  repo: Tuniko
+
+- order: 2
+  name: Colombian Holidays
+  description: Helping your d2c and b2c companies get more customers who pay without breaking your margins
+  icon: android/sendfunds.jpeg
+  # preview: android/col-holidays-preview.png
+  #url: https://col-holidays.co
+  color: "#1F0E32"
+  darkColor: "#1F0E32"
+  hide: true
+  repo: col-holidays

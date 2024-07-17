@@ -1,5 +1,7 @@
 import { unwrapFigure } from 'config/velite/rehype/figure';
 import { blogs } from './config/velite/collections/blog';
+import { projects } from './config/velite/collections/projects';
+import { templates } from './config/velite/collections/templates';
 import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
@@ -12,7 +14,7 @@ import { prettyCode } from 'config/velite/rehype/code';
 import { toc } from 'config/velite/rehype/toc';
 
 export default defineConfig({
-    collections: { blogs },
+    collections: { blogs, projects, templates },
     mdx: {
         copyLinkedFiles: false,
         remarkPlugins: [smartypants, remarkUnwrapImages, remarkSqueezeParagraphs],

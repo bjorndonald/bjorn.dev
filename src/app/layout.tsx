@@ -32,8 +32,7 @@ export const metadata = {
   }),
 };
 
-const { UMAMI_WEBSITE_ID: umamiWebsiteId = "", IS_TEMPLATE = "true" } =
-  process.env;
+const { UMAMI_WEBSITE_ID: umamiWebsiteId = "" } = process.env;
 export default function RootLayout({
   children,
 }: {
@@ -43,11 +42,7 @@ export default function RootLayout({
     <html
       id="page"
       lang="en"
-      className={cx(
-        Inter.className,
-        Manrope.variable,
-        IS_TEMPLATE === "true" ? "template" : "",
-      )}
+      className={cx(Inter.className, Manrope.variable)}
       suppressHydrationWarning
     >
       <head>

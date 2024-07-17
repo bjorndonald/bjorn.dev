@@ -1,3 +1,3 @@
-import {twc} from '@/utils/cx'
+import { twc } from "@/utils/cx";
 
-export const Section = twc.section`flex flex-col gap-5`
+export const Section = twc.section`flex flex-col gap-5`;

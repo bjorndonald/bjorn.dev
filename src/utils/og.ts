@@ -1,7 +1,7 @@
 export const config = {
   size: {
-    width: 1200,
-    height: 630,
+    width: 851,
+    height: 503,
   },
   contentType: "image/png",
 };

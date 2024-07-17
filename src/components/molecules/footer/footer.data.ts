@@ -28,11 +28,11 @@ export const linksGroups = [
         href: "/templates",
         className: "text-yellow",
       },
-      {
-        title: "Uses",
-        href: "/uses",
-        className: "text-blue",
-      },
+      // {
+      //   title: "Uses",
+      //   href: "/uses",
+      //   className: "text-blue",
+      // },
     ],
   },
   {

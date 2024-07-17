@@ -1,19 +1,18 @@
-import { blogs as allBlogs, type Blog } from '@/content';
+import { blogs as allBlogs, type Blog } from "@/content";
 
-export type PartialBlog = Omit<Blog, 'code' | 'keywords' | 'heroSource'>;
+export type PartialBlog = Omit<Blog, "code" | "keywords" | "heroSource">;
 
-const allowDrafts = process.env.NODE_ENV === 'development';
+const allowDrafts = process.env.NODE_ENV === "development";
 
-export const allReadableBlogsWithContent: Array<Blog> = allBlogs.filter((it) =>
-    allowDrafts ? true : !it.draft,
+export const allReadableBlogsWithContent: Array<Blog> = allBlogs.filter(it =>
+  allowDrafts ? true : !it.draft,
 );
 
 export const allReadableBlogs: Array<PartialBlog> =
-    allReadableBlogsWithContent.map((b: Partial<Blog>) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const { code, keywords, heroSource, ...blog } = b;
-        return blog as PartialBlog;
-    });
+  allReadableBlogsWithContent.map((b: Partial<Blog>) => {
+    const { code, keywords, heroSource, ...blog } = b;
+    return blog as PartialBlog;
+  });
 
 export const sortBlogPostsByDate = (a: PartialBlog, b: PartialBlog) =>
-    new Date(b.date).getTime() - new Date(a.date).getTime();
+  new Date(b.date).getTime() - new Date(a.date).getTime();
