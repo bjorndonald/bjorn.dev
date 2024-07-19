@@ -51,8 +51,8 @@ export default function RootLayout({
           defer
           src="https://cloud.umami.is/script.js"
           data-website-id={umamiWebsiteId}
-          data-domains={'bjorncode.dev'}
-          strategy={'lazyOnload'}
+          data-domains={"bjorncode.dev"}
+          strategy={"lazyOnload"}
         />
       </head>
       <body>
