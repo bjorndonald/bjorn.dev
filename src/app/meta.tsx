@@ -5,7 +5,7 @@ export const Meta = () => {
   return (
     <>
       <meta httpEquiv={"x-ua-compatible"} content={"ie=edge"} />
-      
+
       <link rel="shortcut icon" href="/media/brand/favicon32.png" />
       <link rel="apple-touch-icon" href="/media/brand/favicon57.png" />
       <link
