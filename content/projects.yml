@@ -15,14 +15,3 @@
   url: https://github.com/bjorndonald/tuniko
   color: "#0A85F7"
   repo: Tuniko
-
-- order: 2
-  name: Colombian Holidays
-  description: Helping your d2c and b2c companies get more customers who pay without breaking your margins
-  icon: android/sendfunds.jpeg
-  # preview: android/col-holidays-preview.png
-  #url: https://col-holidays.co
-  color: "#1F0E32"
-  darkColor: "#1F0E32"
-  hide: true
-  repo: col-holidays
