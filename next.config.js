@@ -33,7 +33,8 @@ const defaultNextConfig = {
     },
     images: {
         remotePatterns: [
-            { hostname: 'bjorn.dev' },
+            { hostname: 'bjorncode.dev' },
+            { hostname: 'cloud.umami.is' },
             { hostname: 'unavatar.io' },
             { hostname: 'raw.githubusercontent.com' },
             { hostname: 'raw.githubusercontent.com' },
