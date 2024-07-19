@@ -1,6 +1,6 @@
-import { getCounters } from '@/actions/counters';
-import React, { Suspense } from 'react';
-import { ReactionsButtons } from '../reactions';
+import { getCounters } from "@/actions/counters";
+import React, { Suspense } from "react";
+import { ReactionsButtons } from "../reactions";
 
 const Buttons = async ({ slug }: { slug: string }) => {
   const counters = await getCounters(slug);
@@ -10,7 +10,7 @@ const Buttons = async ({ slug }: { slug: string }) => {
 export const Reactions = ({ slug }: { slug?: string }) => {
   if (!slug) return null;
   return (
-    <Suspense fallback={<div className={'min-h-11 min-w-11'} />}>
+    <Suspense fallback={<div className={"min-h-11 min-w-11"} />}>
       <Buttons slug={slug} />
     </Suspense>
   );

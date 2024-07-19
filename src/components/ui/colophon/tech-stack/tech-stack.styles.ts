@@ -1,5 +1,5 @@
-import { Link } from '@/components/atoms/link';
-import { twc } from '@/utils/cx';
+import { Link } from "@/components/atoms/link";
+import { twc } from "@/utils/cx";
 
 export const StackContainer = twc.ul`
     relative

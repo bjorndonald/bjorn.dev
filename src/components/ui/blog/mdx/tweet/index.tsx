@@ -1,11 +1,11 @@
-import { Suspense } from 'react';
-import { TweetNotFound, TweetSkeleton, type TweetProps } from 'react-tweet';
+import { Suspense } from "react";
+import { TweetNotFound, TweetSkeleton, type TweetProps } from "react-tweet";
 
-import { getTweet } from '@/actions/mdx';
+import { getTweet } from "@/actions/mdx";
 
-import { CustomTweet } from './custom-tweet';
+import { CustomTweet } from "./custom-tweet";
 
-import './tweet.scss';
+import "./tweet.scss";
 
 const TweetContent = async ({ id, components, onError }: TweetProps) => {
   const { tweet, error } = await getTweet(id, onError);

@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
-'use client';
+"use client";
 
-import { reactionsNames, type Counters } from '@/types/db';
+import { reactionsNames, type Counters } from "@/types/db";
 
-import { ReactionButton } from './reaction-button';
-import { useReactions } from './use-reactions';
+import { ReactionButton } from "./reaction-button";
+import { useReactions } from "./use-reactions";
 
 interface ReactionsButtonsProps {
   slug: string;
@@ -19,7 +19,7 @@ export const ReactionsButtons = (props: ReactionsButtonsProps) => {
 
   return (
     <div
-      className={'flex flex-row flex-wrap items-center gap-2.5 tablet-md:gap-3'}
+      className={"flex flex-row flex-wrap items-center gap-2.5 tablet-md:gap-3"}
     >
       {reactionsNames.map(reaction => (
         <ReactionButton

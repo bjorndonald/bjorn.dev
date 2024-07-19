@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import confetti from 'canvas-confetti';
+import confetti from "canvas-confetti";
 import {
   useCallback,
   useEffect,
   useState,
   type MouseEvent,
   cache,
-} from 'react';
+} from "react";
 
-import { incrementCounter as incCounter } from '@/actions/counters';
-import { useHasMounted } from '@/hooks/use-has-mounted';
-import { useWindowDimensions } from '@/hooks/use-window-dimensions';
-import type { ReactionName, Counters } from '@/types/db';
+import { incrementCounter as incCounter } from "@/actions/counters";
+import { useHasMounted } from "@/hooks/use-has-mounted";
+import { useWindowDimensions } from "@/hooks/use-window-dimensions";
+import type { ReactionName, Counters } from "@/types/db";
 
-import { confettiOptions, reactionsSetup } from './reaction-button.config';
+import { confettiOptions, reactionsSetup } from "./reaction-button.config";
 
 type ReactedLocalStorage = { [Key in ReactionName]?: boolean };
 
@@ -87,8 +87,8 @@ export const useReactions = (slug: string, initialCounters?: Counters) => {
     event: MouseEvent<HTMLButtonElement>,
     reaction: ReactionName,
   ) => {
-    const hostname = window.location.hostname || 'localhost';
-    const shouldRecordReaction = hostname === 'bjorncode.dev';
+    const hostname = window.location.hostname || "localhost";
+    const shouldRecordReaction = hostname === "bjorncode.dev";
 
     const reacted = shouldRecordReaction
       ? await submitReaction(reaction)

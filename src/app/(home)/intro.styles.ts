@@ -1,4 +1,4 @@
-import { twc } from '@/utils/cx';
+import { twc } from "@/utils/cx";
 
 export const WavingSpan = twc.span`
 inline-block 

@@ -1,14 +1,14 @@
-import type { CSSProperties, ComponentProps } from 'react';
+import type { CSSProperties, ComponentProps } from "react";
 
-import { Icon } from '@/components/atoms/icon';
-import { loading as loadingIcon } from '@/components/icons';
-import type { ReactionName } from '@/types/db';
+import { Icon } from "@/components/atoms/icon";
+import { loading as loadingIcon } from "@/components/icons";
+import type { ReactionName } from "@/types/db";
 
-import { reactionsSetup } from './reaction-button.config';
-import { ReactionIcon, StyledReactionButton } from './reaction-button.styles';
+import { reactionsSetup } from "./reaction-button.config";
+import { ReactionIcon, StyledReactionButton } from "./reaction-button.styles";
 
 interface ReactionButtonProps
-  extends Omit<ComponentProps<'button'>, 'loading'> {
+  extends Omit<ComponentProps<"button">, "loading"> {
   reaction: ReactionName;
   count: number;
   loading?: boolean;
@@ -23,15 +23,15 @@ export const ReactionButton = (props: ReactionButtonProps) => {
       title={reactionsSetup[reaction].title}
       aria-pressed={reacted}
       disabled={loading === true || reacted === true}
-      className={reacted ? 'bg-tint-bg ring-tint-border' : ''}
+      className={reacted ? "bg-tint-bg ring-tint-border" : ""}
       style={
         {
-          '--tint': reactionsSetup[reaction].tint,
+          "--tint": reactionsSetup[reaction].tint,
         } as CSSProperties
       }
     >
       <ReactionIcon
-        className={reacted ? 'text-[rgb(var(--tint))]' : 'text-current'}
+        className={reacted ? "text-[rgb(var(--tint))]" : "text-current"}
         path={
           reacted
             ? reactionsSetup[reaction].icon.filled
@@ -39,9 +39,9 @@ export const ReactionButton = (props: ReactionButtonProps) => {
         }
       />
       {loading ? (
-        <Icon className={'size-4 animate-spin'} path={loadingIcon} />
+        <Icon className={"size-4 animate-spin"} path={loadingIcon} />
       ) : (
-        <span className={'font-manrope font-bold'}>{count}</span>
+        <span className={"font-manrope font-bold"}>{count}</span>
       )}
     </StyledReactionButton>
   );

@@ -9,9 +9,9 @@ export const linksGroups = [
         className: "text-brand",
       },
       {
-        title: 'About',
-        href: '/about',
-        className: 'text-green',
+        title: "About",
+        href: "/about",
+        className: "text-green",
       },
       {
         title: "Blog",
