@@ -31,7 +31,7 @@ const Footer = () => {
           <span className="text-accent">Bjorn-Donald</span>
         </FooterLink>
         <Description>
-          Passionate and creative full-stack software engineer from Colombia{" "}
+          Passionate and creative full-stack software engineer from Nigeria{" "}
           <span role={"img"} aria-label={"Nigeria flag"}>
             🇳🇬
           </span>

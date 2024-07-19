@@ -56,12 +56,7 @@ const AboutPage = () => {
         </p>
         <Photo />
         <p className={"max-w-nice"}>
-          I&apos;m a huge advocate for open source and collaborating with the
-          community. You can find my stash of websites, libraries, and apps on{" "}
-          <Link title={"GitHub"} href={"https://github.com/bjorndonald"}>
-            GitHub
-          </Link>{" "}
-          which have earned over 2K stars.
+          I&apos;m a huge advocate for open source and collaborating with the community.
         </p>
         <p className={"max-w-nice"}>
           I&apos;m all about diving into challenges improving and expanding my
