@@ -56,7 +56,8 @@ const AboutPage = () => {
         </p>
         <Photo />
         <p className={"max-w-nice"}>
-          I&apos;m a huge advocate for open source and collaborating with the community.
+          I&apos;m a huge advocate for open source and collaborating with the
+          community.
         </p>
         <p className={"max-w-nice"}>
           I&apos;m all about diving into challenges improving and expanding my
