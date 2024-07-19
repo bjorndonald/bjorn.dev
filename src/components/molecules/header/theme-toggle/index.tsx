@@ -51,7 +51,6 @@ export const ThemeToggle = () => {
         onChange={e => {
           const newTheme = e.target.value as ThemeOption;
           try {
-            
             window.umami.track("Switch theme", { theme: newTheme });
           } catch (error) {
             console.log();
