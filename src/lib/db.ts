@@ -1,10 +1,10 @@
-import { neon, type NeonQueryFunction } from "@neondatabase/serverless";
+import postgres from "postgres";
+import { drizzle } from "drizzle-orm/postgres-js";
 import { integer, pgTable, varchar } from "drizzle-orm/pg-core";
-import { drizzle } from "drizzle-orm/neon-http";
 
-type CastNeonQueryFunction = NeonQueryFunction<boolean, boolean>
-const { DATABASE_URL= "" } = process.env
-const sql = neon(DATABASE_URL) as CastNeonQueryFunction
+const databaseUrl = process.env.NODE_ENV === "development" ? process.env.AUTH_DRIZZLE_URL! : process.env.AUTH_DRIZZLE_URL! + ";sslmode=verify-ca;sslrootcert=ca.pem"
+
+const sql = postgres(databaseUrl);
 
 export const counters = pgTable("counters", {
     slug: varchar("slug", { length: 255 }).notNull().primaryKey(),
