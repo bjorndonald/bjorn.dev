@@ -127,7 +127,7 @@ export const getReadingProgress = async (): Promise<
     noStore();
     try {
         let finished = false
-        const {data: readingBooksData, errors} = await getReadingBooks()
+        const { data: readingBooksData, errors } = await getReadingBooks()
         if (errors) {
             console.error(errors.map((e) => e.message).join(", "));
             return undefined;
@@ -151,7 +151,6 @@ export const getReadingProgress = async (): Promise<
         if (progressErrors)
             console.error(progressErrors.map((e) => e.message).join(", "));
         const progress = readingProgressData?.readingProgresses.find((p) =>
-            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
             p ? p.bookId === book.id : false,
         );
         // const coverData = await getBlurData(book.cover);

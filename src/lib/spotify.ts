@@ -19,7 +19,7 @@ const buildSpotifyRequest = async<T>(
     const { access_token: accessToken } = await getAccessToken().catch(null);
     if (!accessToken){
         return {
-            error: {message: "Could not get access token", status: 401}
+            error: { message: "Could not get access token", status: 401 }
         }
     }
     const response = await fetch(endpoint, {

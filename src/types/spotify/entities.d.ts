@@ -1,4 +1,4 @@
-import type {SpotifyEntity, Image} from "./entity"
+import type { SpotifyEntity, Image } from "./entity"
 
 interface Album extends SpotifyEntity {
     type: "album";

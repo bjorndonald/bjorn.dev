@@ -15,7 +15,7 @@ export const incrementCounter = async (
     try {
         const [data] = await db
         .insert(counters)
-        .values({slug, [counter]: 0})
+        .values({ slug, [counter]: 0 })
         .onConflictDoUpdate({
             target: counters.slug,
             set: { [counter]: sql`${counters[counter]} + 1` }
