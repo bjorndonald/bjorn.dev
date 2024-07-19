@@ -8,6 +8,7 @@ import { Providers } from "@/providers";
 import Header from "@/components/molecules/header";
 import { Main } from "@/components/atoms/main";
 import Footer from "@/components/molecules/footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   ...createMetadata({
@@ -54,6 +55,11 @@ export default function RootLayout({
           data-domains={"www.bjorncode.dev"}
           strategy={"lazyOnload"}
         />
+
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GZTL6G4HZJ"
+        ></Script>
       </head>
       <body>
         <Providers>
@@ -62,6 +68,7 @@ export default function RootLayout({
           <Footer />
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-GZTL6G4HZJ" />
     </html>
   );
 }
