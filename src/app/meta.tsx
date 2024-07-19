@@ -5,10 +5,7 @@ export const Meta = () => {
   return (
     <>
       <meta httpEquiv={"x-ua-compatible"} content={"ie=edge"} />
-      <meta
-        httpEquiv="Content-Security-Policy"
-        content="script-src 'self' https://cloud.umami.is 'unsafe-inline' 'unsafe-eval';"
-      />
+      
       <link rel="shortcut icon" href="/media/brand/favicon32.png" />
       <link rel="apple-touch-icon" href="/media/brand/favicon57.png" />
       <link

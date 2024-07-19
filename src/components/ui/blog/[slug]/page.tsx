@@ -109,7 +109,7 @@ export function generateMetadata(
   const metadata = createMetadata({
     title: `${title} | Blog – Bjorn-Donald Bassey`,
     description: summary || "Blog post by Bjorn-Donald Bassey",
-    exactUrl: `https://bjorn.dev/blog/${slug}`,
+    exactUrl: `https://bjorncode.dev/blog/${slug}`,
     keywords: post.keywords,
   });
   return {
