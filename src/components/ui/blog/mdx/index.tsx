@@ -1,16 +1,16 @@
-import type { MDXComponents } from "mdx/types";
-import type { ImageProps } from "next/image";
-import * as runtime from "react/jsx-runtime";
+import type { MDXComponents } from 'mdx/types';
+import type { ImageProps } from 'next/image';
+import * as runtime from 'react/jsx-runtime';
 
-import { Img } from "@/components/atoms/img";
-import { Link } from "@/components/atoms/link";
-import { twc } from "@/utils/cx";
+import { Img } from '@/components/atoms/img';
+import { Link } from '@/components/atoms/link';
+import { twc } from '@/utils/cx';
 
-import { Bookmark } from "./bookmark";
-import { ImageComparison } from "./image-comparison";
-import { ReactTweet } from "./tweet";
+import { Bookmark } from './bookmark';
+import { ImageComparison } from './image-comparison';
+import { ReactTweet } from './tweet';
 
-import "./mdx.scss";
+import './mdx.scss';
 
 const Grid = twc.div`
   grid
@@ -49,7 +49,7 @@ export const MDX = (props: MdxProps) => {
   if (!props.code) return null;
   const MdxComponent = getMDXComponent(props.code);
   return (
-    <article className={"mdx"}>
+    <article className={'mdx'}>
       <MdxComponent components={components} />
     </article>
   );

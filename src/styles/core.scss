@@ -30,12 +30,12 @@ figure figcaption {
     @apply text-3xs text-center my-2.5;
 }
 
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
     @apply appearance-none;
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
     @apply align-middle;
 }
 
@@ -67,7 +67,7 @@ body article [id] {
     @apply scroll-mt-20 tablet-sm:scroll-mt-24 tablet-md:scroll-mt-28;
 }
 
-span[role='img'][aria-label] {
+span[role="img"][aria-label] {
     @apply text-primary-txt;
 }
 
@@ -100,7 +100,7 @@ html {
 
 /* Fix image border in Safari for lazy loading images. See https://nextjs.org/docs/api-reference/next/future/image#known-browser-bugs */
 @media not all and (min-resolution: 0.001dpcm) {
-    img[loading='lazy'] {
+    img[loading="lazy"] {
         clip-path: inset(0.5px);
     }
 }

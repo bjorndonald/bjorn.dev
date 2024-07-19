@@ -1,17 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { config } from "@/utils/og";
-import { LogoOrEmoji, PageTitle, type PathName } from "./logo-title";
-import { Name } from "./name";
+import { config } from '@/utils/og';
+import { LogoOrEmoji, PageTitle, type PathName } from './logo-title';
+import { Name } from './name';
 
 const baseUrl =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:3000"
-    : process.env.VERCEL_ENV === "preview"
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : process.env.VERCEL_ENV === 'preview'
       ? process.env.VERCEL_URL
         ? `https://${process.env.VERCEL_URL}`
-        : "https://bjorncode.dev"
-      : "https://bjorncode.dev";
+        : 'https://bjorncode.dev'
+      : 'https://bjorncode.dev';
 
 interface OgImageProps {
   path?: PathName;
@@ -22,7 +22,7 @@ interface OgImageProps {
 const getGradientOverlay = (title?: string | null) => {
   const hasTitle = Boolean(title);
   return [
-    "rgba(8, 15, 30, 1) 0%",
+    'rgba(8, 15, 30, 1) 0%',
     `rgba(8, 15, 30, 0.5) ${hasTitle ? 60 : 50}%`,
     `rgba(8, 15, 30, ${hasTitle ? 0.05 : 0}) 100%`,
   ];
@@ -33,32 +33,32 @@ export const OgImage = (props: OgImageProps) => {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        height: "100%",
-        width: "100%",
-        padding: "56px 104px",
-        alignItems: "flex-start",
-        justifyContent: "flex-end",
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+        width: '100%',
+        padding: '56px 104px',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-end',
         gap: path ? 0 : 12,
-        fontFamily: "Manrope",
-        color: "white",
-        textShadow: "0px 2px 4px rgba(8 15 30 / 0.5)",
-        backgroundColor: "rgb(8, 15, 30)",
+        fontFamily: 'Manrope',
+        color: 'white',
+        textShadow: '0px 2px 4px rgba(8 15 30 / 0.5)',
+        backgroundColor: 'rgb(8, 15, 30)',
       }}
     >
       <img
         src={`${baseUrl}/${hero}`}
-        alt={title || "Hero image"}
+        alt={title || 'Hero image'}
         width={config.size.height}
         height={config.size.width}
         style={{
-          position: "absolute",
-          width: "auto",
-          height: "auto",
+          position: 'absolute',
+          width: 'auto',
+          height: 'auto',
           margin: 0,
-          objectFit: "cover",
-          objectPosition: "center",
+          objectFit: 'cover',
+          objectPosition: 'center',
           top: 0,
           right: 0,
           left: 0,
@@ -69,8 +69,8 @@ export const OgImage = (props: OgImageProps) => {
         style={{
           backgroundImage:
             // eslint-disable-next-line max-len
-            `linear-gradient(65deg, ${getGradientOverlay(title).join(", ")})`,
-          position: "absolute",
+            `linear-gradient(65deg, ${getGradientOverlay(title).join(', ')})`,
+          position: 'absolute',
           top: 0,
           right: 0,
           left: 0,

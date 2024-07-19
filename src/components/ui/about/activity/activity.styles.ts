@@ -1,6 +1,6 @@
-import { Img } from "@/components/atoms/img";
-import { Link } from "@/components/atoms/link";
-import { twc } from "@/utils/cx";
+import { Img } from '@/components/atoms/img';
+import { Link } from '@/components/atoms/link';
+import { twc } from '@/utils/cx';
 
 export const ActivityCard = twc(Link)`
   font-normal
@@ -85,7 +85,7 @@ export const MusicBarsGroup = twc.span`
 `;
 
 export const MusicBar = twc.span.attrs({
-  style: { transformOrigin: "bottom" },
+  style: { transformOrigin: 'bottom' },
 })`
   w-0.75
   h-full

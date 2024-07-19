@@ -1,28 +1,28 @@
-import Logo from "@/components/atoms/logo";
+import Logo from '@/components/atoms/logo';
 
 const pathEmojiMap = {
-  "404": "👻",
-  about: "😀",
-  now: "ℹ️",
-  donate: "🎁",
-  projects: "💼",
-  uses: "💻",
-  blog: "📄",
-  colophon: "🛠️",
+  '404': '👻',
+  about: '😀',
+  now: 'ℹ️',
+  donate: '🎁',
+  projects: '💼',
+  uses: '💻',
+  blog: '📄',
+  colophon: '🛠️',
 };
 
 export type PathName = keyof typeof pathEmojiMap | null;
 
 const pathTitleMap = {
-  "404": "Page not found",
-  about: "About",
-  now: "Now",
-  donate: "Donate",
-  projects: "Projects",
-  templates: "Templates",
-  uses: "Uses",
-  blog: "Blog",
-  colophon: "Colophon",
+  '404': 'Page not found',
+  about: 'About',
+  now: 'Now',
+  donate: 'Donate',
+  projects: 'Projects',
+  templates: 'Templates',
+  uses: 'Uses',
+  blog: 'Blog',
+  colophon: 'Colophon',
 };
 const titleFontSize = 64;
 
@@ -34,9 +34,9 @@ export const LogoOrEmoji = (props: { path?: PathName }) => {
         style={{
           width: titleFontSize * 2,
           height: titleFontSize * 2,
-          filter: "saturate(1.5)",
-          color: "#88a4e6",
-          fill: "#88a4e6",
+          filter: 'saturate(1.5)',
+          color: '#88a4e6',
+          fill: '#88a4e6',
         }}
       />
     );
@@ -53,20 +53,20 @@ export const PageTitle = (props: {
   return (
     <p
       style={{
-        alignSelf: "flex-start",
+        alignSelf: 'flex-start',
         fontSize: titleFontSize,
         fontWeight: 700,
         maxWidth: 900,
-        color: path ? "white" : "rgba(0, 0, 0, 0)",
+        color: path ? 'white' : 'rgba(0, 0, 0, 0)',
         ...(path
           ? {}
           : {
-              color: "#88a4e6",
-              filter: "saturate(1.5)",
+              color: '#88a4e6',
+              filter: 'saturate(1.5)',
             }),
       }}
     >
-      {title || pathTitle || "Jahir Fiquitiva"}
+      {title || pathTitle || 'Jahir Fiquitiva'}
     </p>
   );
 };

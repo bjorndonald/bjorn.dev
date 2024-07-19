@@ -1,7 +1,7 @@
 import type { CounterName, Counters } from "@/types/db";
-import {db, counters} from '@/lib/db'
-import {canRunAction} from './utils'
-import { unstable_noStore as noStore } from 'next/cache';
+import {db, counters} from "@/lib/db"
+import {canRunAction} from "./utils"
+import { unstable_noStore as noStore } from "next/cache";
 import { and, desc, eq, gt, ne, sql } from "drizzle-orm";
 
 export const incrementCounter = async (
@@ -21,7 +21,9 @@ export const incrementCounter = async (
         .returning({[counter]: counters[counter]})
         return data
     } catch (error) {
-        return {}
+        return {
+            //
+        }
     }
 }
 export type IncrementCounterFnType = typeof incrementCounter;
@@ -37,7 +39,9 @@ export const getCounters = async (slug: string): Promise<Counters> => {
         if (!records.length) return {}
         return records[0] as Counters
     } catch (error) {
-        return {}
+        return { 
+            //
+        }
     }
 }
 
@@ -49,9 +53,9 @@ export const getTopThreeBlogPosts = async (latestBlogPostSlug: string) => {
         .from(counters)
         .where(
             and(
-                // It isn't "uses" blog post
-                ne(counters.slug, 'uses'),
-                // It isn't the most recent blog post
+                // It isn"t "uses" blog post
+                ne(counters.slug, "uses"),
+                // It isn"t the most recent blog post
                 ne(counters.slug, latestBlogPostSlug),
                 // Has more than 1 view
                 gt(counters.views, 1),

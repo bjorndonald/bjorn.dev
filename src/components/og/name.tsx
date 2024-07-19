@@ -1,6 +1,6 @@
-import Logo from "@/components/atoms/logo";
+import Logo from '@/components/atoms/logo';
 
-import type { PathName } from "./logo-title";
+import type { PathName } from './logo-title';
 
 const defaultFontSize = 36;
 export const Name = (props: { path?: PathName; fontSize?: number }) => {
@@ -9,8 +9,8 @@ export const Name = (props: { path?: PathName; fontSize?: number }) => {
   return (
     <div
       style={{
-        display: "flex",
-        alignItems: "center",
+        display: 'flex',
+        alignItems: 'center',
         gap: 12,
         fontSize,
       }}
@@ -19,19 +19,19 @@ export const Name = (props: { path?: PathName; fontSize?: number }) => {
         style={{
           width: fontSize,
           height: fontSize,
-          filter: "saturate(1.5)",
-          color: "#88a4e6",
-          fill: "#88a4e6",
+          filter: 'saturate(1.5)',
+          color: '#88a4e6',
+          fill: '#88a4e6',
         }}
       />
       <p
         style={{
-          alignSelf: "flex-start",
+          alignSelf: 'flex-start',
           fontWeight: 700,
-          color: "rgba(0, 0, 0, 0)",
-          backgroundImage: "linear-gradient(to right, #88a4e6, #38bdf8)",
-          backgroundClip: "text",
-          filter: "saturate(1.5)",
+          color: 'rgba(0, 0, 0, 0)',
+          backgroundImage: 'linear-gradient(to right, #88a4e6, #38bdf8)',
+          backgroundClip: 'text',
+          filter: 'saturate(1.5)',
         }}
       >
         Bjorn-Donald Bassey

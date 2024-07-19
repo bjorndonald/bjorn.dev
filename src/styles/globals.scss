@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './colors.scss';
-@import './reset.scss';
-@import './core.scss';
+@import "./colors.scss";
+@import "./reset.scss";
+@import "./core.scss";
 
-@import './gradients.scss';
-@import './typography.scss';
+@import "./gradients.scss";
+@import "./typography.scss";
 
 @layer utilities {
     .no-scrollbar {
@@ -31,7 +31,7 @@
 
 //         &::before {
 //             z-index: 9999;
-//             content: '';
+//             content: "";
 //         }
 //     }
 // }

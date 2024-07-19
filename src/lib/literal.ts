@@ -1,10 +1,10 @@
-'use server';
+"use server";
 
-import { unstable_noStore as noStore } from 'next/cache';
+import { unstable_noStore as noStore } from "next/cache";
 
 const {
-    LITERAL_PROFILE_ID: profileId = '',
-    LITERAL_ACCESS_TOKEN: accessToken = '',
+    LITERAL_PROFILE_ID: profileId = "",
+    LITERAL_ACCESS_TOKEN: accessToken = "",
 } = process.env;
 
 const readingBooksQuery = `
@@ -83,14 +83,14 @@ type ReadingProgressResponse = GraphQLResponse<{
 const getReadingBooks = async (
     finished: boolean = false,
 ): Promise<ReadingBooksResponse> => {
-    return fetch('https://literal.club/graphql/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+    return fetch("https://literal.club/graphql/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             query: readingBooksQuery,
             variables: {
                 profileId,
-                readingStatus: finished ? 'FINISHED' : 'IS_READING',
+                readingStatus: finished ? "FINISHED" : "IS_READING",
                 limit: 1,
                 offset: 0,
             },
@@ -102,10 +102,10 @@ const getReadingBooks = async (
 const getBookProgress = async (
     bookId: string,
 ): Promise<ReadingProgressResponse> => {
-    return fetch('https://literal.club/graphql/', {
-        method: 'POST',
+    return fetch("https://literal.club/graphql/", {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
             Authorization: `Bearer ${accessToken}`,
         },
         body: JSON.stringify({
@@ -129,7 +129,7 @@ export const getReadingProgress = async (): Promise<
         let finished = false
         const {data: readingBooksData, errors} = await getReadingBooks()
         if (errors) {
-            console.error(errors.map((e) => e.message).join(', '));
+            console.error(errors.map((e) => e.message).join(", "));
             return undefined;
         }
         let { booksByReadingStateAndProfile = [] } = readingBooksData || {};
@@ -137,7 +137,7 @@ export const getReadingProgress = async (): Promise<
             const { data: finishedBooksData, errors: finishedBooksErrors } =
                 await getReadingBooks(true);
             if (finishedBooksErrors) {
-                console.error(finishedBooksErrors.map((e) => e.message).join(', '));
+                console.error(finishedBooksErrors.map((e) => e.message).join(", "));
                 return undefined;
             }
             booksByReadingStateAndProfile =
@@ -149,7 +149,7 @@ export const getReadingProgress = async (): Promise<
         const { data: readingProgressData, errors: progressErrors } =
             await getBookProgress(book.id);
         if (progressErrors)
-            console.error(progressErrors.map((e) => e.message).join(', '));
+            console.error(progressErrors.map((e) => e.message).join(", "));
         const progress = readingProgressData?.readingProgresses.find((p) =>
             // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
             p ? p.bookId === book.id : false,

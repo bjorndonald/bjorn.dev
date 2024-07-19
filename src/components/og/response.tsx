@@ -1,24 +1,24 @@
-import type { SatoriOptions } from "next/dist/compiled/@vercel/og/satori";
-import { ImageResponse } from "next/og";
+import type { SatoriOptions } from 'next/dist/compiled/@vercel/og/satori';
+import { ImageResponse } from 'next/og';
 
-import { config } from "@/utils/og";
+import { config } from '@/utils/og';
 
-import type { PathName } from "./logo-title";
-import { OgImage } from "./og";
+import type { PathName } from './logo-title';
+import { OgImage } from './og';
 
 const getManropeFont = async (): Promise<
-  SatoriOptions["fonts"] | undefined
+  SatoriOptions['fonts'] | undefined
 > => {
-  const url = new URL("../../assets/fonts/Manrope-Bold.ttf", import.meta.url);
+  const url = new URL('../../assets/fonts/Manrope-Bold.ttf', import.meta.url);
   try {
     const fontData = await fetch(url)
       .then(res => res.arrayBuffer())
       .catch(null);
     return [
       {
-        name: "Manrope",
+        name: 'Manrope',
         data: fontData,
-        style: "normal",
+        style: 'normal',
       },
     ];
   } catch (e) {
@@ -31,16 +31,16 @@ export const getOgImage = async (
   title?: string | null,
   hero?: string | null,
 ) => {
-  const actualPath = (path || "").toLowerCase() as PathName;
-  let actualHero = hero || "/media/site/default-og.png";
-  if (actualHero.startsWith("/")) actualHero = actualHero.substring(1);
+  const actualPath = (path || '').toLowerCase() as PathName;
+  let actualHero = hero || '/media/site/default-og.png';
+  if (actualHero.startsWith('/')) actualHero = actualHero.substring(1);
 
   return new ImageResponse(
     <OgImage path={actualPath} title={title} hero={actualHero} />,
     {
       width: config.size.width,
       height: config.size.height,
-      emoji: "fluent",
+      emoji: 'fluent',
       fonts: await getManropeFont(),
     },
   );

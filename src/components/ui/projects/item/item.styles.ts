@@ -1,6 +1,6 @@
-import { Img } from "@/components/atoms/img";
-import { Link } from "@/components/atoms/link";
-import { twc } from "@/utils/cx";
+import { Img } from '@/components/atoms/img';
+import { Link } from '@/components/atoms/link';
+import { twc } from '@/utils/cx';
 
 export const ProjectLink = twc(Link)`
     font-normal

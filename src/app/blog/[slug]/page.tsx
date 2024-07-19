@@ -40,7 +40,7 @@ const blogPostStructuredData = (post?: PartialBlog): string => {
 };
 
 // This seems to cause this error:
-// Error: Invariant: PPR lambda isn't streaming
+// Error: Invariant: PPR lambda isn"t streaming
 // export const dynamicParams = false;
 
 export default function BlogPostPage(context: BlogPostPageContext) {

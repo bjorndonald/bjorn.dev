@@ -1,14 +1,14 @@
-'use server';
+"use server";
 
-import {unstable_noStore as noStore} from 'next/cache'
-import type {TweetProps} from 'react-tweet'
-import {getTweet as getTweetFromApi} from 'react-tweet/api'
+import {unstable_noStore as noStore} from "next/cache"
+import type {TweetProps} from "react-tweet"
+import {getTweet as getTweetFromApi} from "react-tweet/api"
 
 export const getTweet = async (
-    id?: TweetProps['id'],
-    onError?: TweetProps['onError'],
+    id?: TweetProps["id"],
+    onError?: TweetProps["onError"],
 ) => {
-    if (!id) return { error: 'Missing tweet id' };
+    if (!id) return { error: "Missing tweet id" };
     noStore();
     try {
         let error;

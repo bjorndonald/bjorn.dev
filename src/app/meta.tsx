@@ -29,10 +29,10 @@ export const Meta = () => {
       />
 
       {/* <link
-                rel={'alternate'}
-                href={'/feed.xml'}
-                type={'application/rss+xml'}
-                title={'Jahir Fiquitiva (RSS)'}
+                rel={"alternate"}
+                href={"/feed.xml"}
+                type={"application/rss+xml"}
+                title={"Jahir Fiquitiva (RSS)"}
             /> */}
 
       {colorMetaTags.map(tag => (

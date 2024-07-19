@@ -1,6 +1,6 @@
-import { OutlinedButton } from "@/components/atoms/button";
-import { Icon } from "@/components/atoms/icon";
-import { twc } from "@/utils/cx";
+import { OutlinedButton } from '@/components/atoms/button';
+import { Icon } from '@/components/atoms/icon';
+import { twc } from '@/utils/cx';
 
 export const StyledReactionButton = twc(OutlinedButton)`
   rounded-full px-4 py-2
