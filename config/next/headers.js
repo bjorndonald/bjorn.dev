@@ -2,7 +2,7 @@
 const ContentSecurityPolicy = `
   default-src 'self' vercel.live;
   worker-src 'self' blob:;
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.umami.is *.bjorncode.dev;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.umami.is *.bjorncode.dev;
   child-src *.umami.is *.scdn.co *.spotify.com *.bjorncode.dev unavatar.now.sh *.unavatar.io;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
