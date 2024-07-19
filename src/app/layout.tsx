@@ -48,9 +48,9 @@ export default function RootLayout({
       <head>
         <Meta />
         <Script
-          src={"https://umami.bjorncode.dev/script.js"}
+          defer
+          src="https://cloud.umami.is/script.js"
           data-website-id={umamiWebsiteId}
-          data-domains={"bjorncode.dev"}
           strategy={"lazyOnload"}
         />
       </head>
