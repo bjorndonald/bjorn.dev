@@ -39,14 +39,14 @@ export const linksGroups = [
     title: "Misc",
     a11yTitle: "Miscellaneous links",
     links: [
-      {
-        title: "Contact",
-        href: "/contact",
-        className: "text-green",
-        props: {
-          ignoreNextLink: true,
-        },
-      },
+      // {
+      //   title: "Contact",
+      //   href: "/contact",
+      //   className: "text-green",
+      //   props: {
+      //     ignoreNextLink: true,
+      //   },
+      // },
       {
         title: "RSS Feed",
         href: "/feed.xml",

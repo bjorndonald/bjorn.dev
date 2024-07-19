@@ -52,7 +52,7 @@ export const SocialLinks = (props: ComponentProps<"ul">) => {
           </span>
         </SocialLink>
       </li>
-      
+
       <li>
         <SocialLink
           title={"Email"}
