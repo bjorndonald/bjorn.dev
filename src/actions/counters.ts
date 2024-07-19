@@ -1,14 +1,16 @@
 import type { CounterName, Counters } from "@/types/db";
-import {db, counters} from "@/lib/db"
-import {canRunAction} from "./utils"
+import { db, counters } from "@/lib/db"
+import { canRunAction } from "./utils"
 import { unstable_noStore as noStore } from "next/cache";
 import { and, desc, eq, gt, ne, sql } from "drizzle-orm";
 
 export const incrementCounter = async (
     slug: string,
     counter: CounterName
-): Promise<{[counter in CounterName]?: number}> => {
-    if (!canRunAction) return {};
+): Promise<{ [counter in CounterName]?: number }> => {
+    if (!canRunAction) return {
+        //
+    };
     noStore();
     try {
         const [data] = await db
@@ -16,9 +18,9 @@ export const incrementCounter = async (
         .values({slug, [counter]: 0})
         .onConflictDoUpdate({
             target: counters.slug,
-            set: {[counter]: sql`${counters[counter]} + 1`}
+            set: { [counter]: sql`${counters[counter]} + 1` }
         })
-        .returning({[counter]: counters[counter]})
+        .returning({ [counter]: counters[counter] })
         return data
     } catch (error) {
         return {
@@ -36,7 +38,9 @@ export const getCounters = async (slug: string): Promise<Counters> => {
         .from(counters)
         .where(eq(counters.slug, slug))
         .execute();
-        if (!records.length) return {}
+        if (!records.length) return {
+            // 
+        }
         return records[0] as Counters
     } catch (error) {
         return { 
@@ -49,7 +53,7 @@ export const getTopThreeBlogPosts = async (latestBlogPostSlug: string) => {
     noStore();
     try {
         const topThree = await db
-        .select({slug: counters.slug, views: counters.views})
+        .select({ slug: counters.slug, views: counters.views })
         .from(counters)
         .where(
             and(
