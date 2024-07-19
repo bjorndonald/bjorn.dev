@@ -3,7 +3,7 @@
   description: A simple chess game
   icon: web/quickchess.png
   preview: web/quickchess-preview.png
-  url: https://github.com/bjorndonald/chess.dev
+  url: https://quickchess.vercel.app
   color: "#000000"
   repo: chess.dev
 
@@ -12,6 +12,6 @@
   description: This is a platform that allows users to help each other with translations for languages not supported digitally
   icon: web/tuniko.png
   preview: web/tuniko-preview.png
-  url: https://github.com/bjorndonald/tuniko
+  url: https://tuniko.info
   color: "#0A85F7"
   repo: Tuniko

@@ -4,7 +4,7 @@ import type { ImageProps, StaticImageData } from "next/image";
 import Image from "next/image";
 import { useState } from "react";
 
-export const Img = (props: ImageProps) => {
+export const Img = (props: ImageProps) => { 
   const [errored, setErrored] = useState<boolean>(false);
   return (
     <Image
