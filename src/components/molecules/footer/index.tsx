@@ -73,13 +73,13 @@ const Footer = () => {
           </LinksList>
         );
       })}
-      <div
+      {/* <div
         className={
           "col-span-2 flex min-h-6 flex-row items-center justify-start self-start"
         }
       >
         <FooterNowPlaying />
-      </div>
+      </div> */}
     </StyledFooter>
   );
 };
