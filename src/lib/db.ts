@@ -2,7 +2,7 @@ import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
 import { integer, pgTable, varchar } from "drizzle-orm/pg-core";
 
-const databaseUrl = process.env.NODE_ENV === "development" ? process.env.AUTH_DRIZZLE_URL! : process.env.AUTH_DRIZZLE_URL! + ";sslmode=verify-ca;sslrootcert=ca.pem"
+const databaseUrl = process.env.NODE_ENV === "development" ? process.env.DATABASE_URL! : process.env.DATABASE_URL! + ";sslmode=verify-ca;sslrootcert=ca.pem"
 
 const sql = postgres(databaseUrl);
 
