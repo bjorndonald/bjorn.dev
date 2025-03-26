@@ -21,7 +21,7 @@
   description: This is a platform that allows users to help each other with translations for languages not supported digitally
   icon: web/tuniko.png
   preview: web/tuniko-preview.png
-  url: https://tuniko.info
+  url: https://www.tuniko.info
   color: "#0A85F7"
   repo: tuniko
 
@@ -32,3 +32,11 @@
   preview: web/traderstools-preview.png
   url: https://traderstools.com/
   color: "#000000"
+
+- order: 4
+  name: Bjorn-Donald Bassey Portfolio site
+  description: Portfolio site for yours truly
+  icon: web/logo-def-md.png
+  url: https://www.bjorncode.dev
+  color: "#000000"
+  repo: bjorn.dev
