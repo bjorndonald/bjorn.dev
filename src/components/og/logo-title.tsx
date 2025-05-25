@@ -61,9 +61,9 @@ export const PageTitle = (props: {
         ...(path
           ? {}
           : {
-            color: "#88a4e6",
-            filter: "saturate(1.5)",
-          }),
+              color: "#88a4e6",
+              filter: "saturate(1.5)",
+            }),
       }}
     >
       {title || pathTitle || "Bjorn-Donald Bassey"}
