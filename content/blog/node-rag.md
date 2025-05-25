@@ -3,8 +3,8 @@ title: Supercharging Retrieval-Augmented Generation with NodeRAG: A Graph-Centri
 date: '2025-05-25'
 color: '#C3187B'
 hero: noderag-hero.png
-summary: A programmer's journey of rekindling their passion, embracing continuous learning, and transforming ideas into viable products while navigating the challenges of personal and professional growth.
-keywords: 'figuring out, Leetcode, Golang, solopreneurship, Rust, skills, passion, support'
+summary: Explore how NodeRAG enhances RAG performance through graph structures for smarter retrieval and multi-hop reasoning.
+keywords: 'ai, rag, graph, retrieval, noderag'
 ---
 
 # Supercharging Retrieval-Augmented Generation with NodeRAG: A Graph-Centric Approach
