@@ -8,24 +8,15 @@
   repo: movingmountainslogistics
 
 - order: 1
-  name: Quick chess
-  description: A simple chess game
-  icon: web/quickchess.png
-  preview: web/quickchess-preview.png
-  url: https://quickchess.vercel.app
-  color: "#000000"
-  repo: chess.dev
+  name: Juune
+  description: A bot that executes trading signals from a broker
+  icon: web/juune.png
+  preview: web/juune-preview.png
+  url: https://www.juune.xyz
+  color: "#ffffff"
+  repo: juune.xyz
 
 - order: 2
-  name: Tuniko
-  description: This is a platform that allows users to help each other with translations for languages not supported digitally
-  icon: web/tuniko.png
-  preview: web/tuniko-preview.png
-  url: https://www.tuniko.info
-  color: "#0A85F7"
-  repo: tuniko
-
-- order: 3
   name: Traderstools
   description: A website for a financial services application which gives users access to a variety of tools to help them make better trading decisions
   icon: web/traderstools.png
@@ -33,7 +24,7 @@
   url: https://traderstools.com/
   color: "#000000"
 
-- order: 4
+- order: 3
   name: Bjorn-Donald Bassey Portfolio site
   description: Portfolio site for yours truly
   icon: web/logo-def-md.png
