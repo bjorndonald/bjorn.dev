@@ -19,7 +19,7 @@
 - order: 2
   name: Traderstools
   description: A website for a financial services application which gives users access to a variety of tools to help them make better trading decisions
-  icon: web/traderstools.png
+  icon: web/traderstools.svg
   preview: web/traderstools-preview.png
   url: https://traderstools.com/
   color: "#000000"
