@@ -1,4 +1,22 @@
 - order: 0
+  name: Interactive PDF Reader
+  description: A bot that executes trading signals from a broker
+  icon: web/flutter.png
+  preview: web/flutter.png
+  url: https://pub.dev/packages/interactive_pdf_viewer
+  color: "#ffffff"
+  repo: interactive_pdf_viewer
+
+- order: 1
+  name: Flutter Check Design MCP
+  description: And MCP server that helps an LLM test the design of a Flutter app
+  icon: web/mcp.png
+  preview: web/mcp.png
+  url: https://github.com/bjorndonald/flutter-check-design
+  color: "#ffffff"
+  repo: flutter-check-design
+
+- order: 2
   name: Moving mountains Logistics
   description: A website for a logistics company
   icon: web/mml.png
@@ -7,7 +25,7 @@
   color: "#000000"
   repo: movingmountainslogistics
 
-- order: 1
+- order: 3
   name: Juune
   description: A bot that executes trading signals from a broker
   icon: web/juune.png
@@ -16,7 +34,7 @@
   color: "#ffffff"
   repo: juune.xyz
 
-- order: 2
+- order: 4
   name: Traderstools
   description: A website for a financial services application which gives users access to a variety of tools to help them make better trading decisions
   icon: web/traderstools.svg
@@ -24,7 +42,7 @@
   url: https://traderstools.com/
   color: "#000000"
 
-- order: 3
+- order: 5
   name: Bjorn-Donald Bassey Portfolio site
   description: Portfolio site for yours truly
   icon: web/logo-def-md.png

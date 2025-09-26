@@ -1,6 +1,40 @@
 [
   {
     "order": 0,
+    "name": "Interactive PDF Reader",
+    "description": "A bot that executes trading signals from a broker",
+    "icon": "web/flutter.png",
+    "preview": "web/juune-preview.png",
+    "url": "https://pub.dev/packages/interactive_pdf_viewer",
+    "color": "#ffffff",
+    "repo": "interactive_pdf_viewer",
+    "hide": false,
+    "iconMeta": {
+      "width": 72,
+      "height": 72,
+      "blurDataURL": "media/projects/web/flutter.png",
+      "placeholder": "blur"
+    }
+  },
+  {
+    "order": 1,
+        "name": "Flutter Check Design MCP",
+    "description": "A bot that executes trading signals from a broker",
+    "icon": "web/mcp.png",
+    "preview": "web/mcp.png",
+    "url": "https://www.flutter-check-design-mcp.com",
+    "color": "#ffffff",
+    "repo": "flutter-check-design",
+    "hide": false,
+    "iconMeta": {
+      "width": 72,
+      "height": 72,
+      "blurDataURL": "media/projects/web/mcp.png",
+      "placeholder": "blur"
+    }
+  },
+  {
+    "order": 2,
     "name": "Trading Signal Executor Bot",
     "description": "A bot that executes trading signals from a broker",
     "icon": "web/juune.png",
@@ -18,7 +52,7 @@
   },
   
   {
-    "order": 1,
+    "order": 3,
     "name": "Moving mountains Logistics",
     "description": "A website for a logistics company",
     "icon": "web/mml.png",
@@ -35,7 +69,7 @@
     }
   },
   {
-    "order": 2,
+    "order": 4,
     "name": "Traderstools",
     "description": "A website for a financial services application which gives users access to a variety of tools to help them make better trading decisions",
     "icon": "web/traderstools.png",
@@ -46,7 +80,7 @@
     "iconMeta": null
   },
   {
-    "order": 3,
+    "order": 5,
     "name": "Bjorn-Donald Bassey Portfolio site",
     "description": "Portfolio site for yours truly",
     "icon": "web/logo-def-md.png",
