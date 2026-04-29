@@ -1,0 +1,105 @@
+---
+title: Technical side of Kubernetes
+date: '2026-04-29'
+color: '#326CE5'
+hero: technical-side-of-kubernetes/image1.png
+summary: I decided to get right into working with Kubernetes because it helps with learning how to operate a cluster and gives context for further study.
+keywords: 'kubernetes, services, ingress, configmap, secrets, statefulset, volumes, deployments, kubectl, minikube, rancher desktop, docker'
+---
+
+## Overview
+
+I decided to get right into working with Kubernetes because it helps with learning how to operate a cluster. It also gives context for further study. Before that, it is important to discuss some crucial components of a Kubernetes cluster.
+
+These components are:
+
+- Services
+- Ingress
+- ConfigMap
+- Secrets
+- StatefulSet
+- Volume
+- Deployments
+
+## Core cluster components (quick technical context)
+
+Every pod gets an IP address. Pods are ephemeral and can die quickly. If a pod dies (for example, because the container crashes due to lack of resources), it will be recreated with a different IP address. That would be annoying to manage if you had other components that talk to that pod. So you use a **Service**. A Service has its own IP address, and it can act like a proxy for the pods. The lifecycle of the pods and the Service are different, so the Service’s IP address won’t change if a pod is recreated.
+
+Say you want the application to be available through a browser. You can create an internal Service that you can use to connect one component to another within your application (e.g., a database) but not expose it to the outside world. You can use an external Service to have users connect to certain components of your cluster (say, the frontend application), but the address would look like `192.168.11.0:8080`, which isn’t ideal. So you need to use **Ingress**, which can provide a more readable address and forward whichever request is sent to it to the appropriate destination. The Service also acts as a load balancer, diverting traffic to an appropriate pod based on changing demands and available resources.
+
+A **ConfigMap** acts as a store for configuration data useful for running the application. It is an external configuration for your Kubernetes cluster. Putting credentials into a ConfigMap in plain text is not advisable, but you can store these in a **Secret**. That does not mean that information is automatically secure in a Secret, though. It is expected that the data is encrypted by a third party. A Secret is an external store for your application, specifically designed to store confidential information.
+
+Remember when I said pods are ephemeral. What about the pod that holds your database? That would be inefficient because the stored data could be lost easily. You can use a **Volume**, a persistent way to manage data storage. A Volume is a directory which is accessible to all containers in a pod, providing shared data storage that can survive container crashes. You can configure the data storage to be stored locally on the machine or in a remote location. That is not part of the cluster, but you can reference it.
+
+Kubernetes does not manage data persistence. A database cannot be replicated with a Deployment, as databases have state. So you need to ensure that different clones of the database access the same storage, and also manage which pods are writing to and reading from the storage in order to avoid data inconsistencies. The controller that enables this is called a **StatefulSet**. A StatefulSet is a controller that manages applications requiring persistent storage, stable network identities, and ordered deployment/scaling. It is used specifically for stateful applications. It allows for replication. It makes sure the database reads and writes asynchronously so that data inconsistencies are avoided.
+
+## Web application demo
+
+<Img
+  src="/media/blog/technical-side-of-kubernetes/image1.png"
+  alt=""
+  width={1999}
+  height={1314}
+  className="mx-auto h-auto max-h-[520px] w-auto max-w-full object-contain"
+/>
+
+This section includes instructions to produce a simple cluster that hosts a web application that can be accessed from the browser. This will involve creating two Deployments:
+
+- One that hosts the web app
+- One that hosts a MongoDB database
+
+The web app will require configuration data, which it will get from a ConfigMap. The `mongo-user` and `mongo-password` will be stored in a Secret. Both of these we will configure.
+
+We will be doing all our writing in Bash. If you do not have Bash on your computer, use another alternative such as WSL, CMD, or similar. Or you can install Git Bash, which should work similarly.
+
+## Prerequisites
+
+Docker (or similar) is required for running Kubernetes clusters, as it is responsible for running containers. Follow the instructions for your OS:
+
+- [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
+- [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Linux](https://docs.docker.com/desktop/setup/install/linux/)
+
+If you have successfully installed it, run `docker version` in your terminal to confirm. Open Docker Desktop and agree to the terms. Choose recommended settings and click Finish.
+
+## Getting a local Kubernetes cluster
+
+Now we need a virtual machine that will host our clusters. Thankfully, there are open-source options to easily run a Kubernetes cluster locally.
+
+### The Docker route
+
+Docker Desktop gives you the ability to create a cluster and get started with the click of a button. Open Docker Desktop, navigate to the Kubernetes page from the sidebar, and create the cluster.
+
+### Minikube
+
+This is a local Kubernetes cluster that enables you to learn and develop for Kubernetes. All you need is Docker (or a compatible container/VM environment).
+
+Follow the instructions [here](https://minikube.sigs.k8s.io/docs/start) to get started. After that, run:
+
+```bash
+minikube start
+```
+
+### Rancher Desktop
+
+If the other two options give you issues, Rancher Desktop is an open-source application that provides the essentials to work with containers and Kubernetes on the desktop. You can download an installer [here](https://rancherdesktop.io/). During installation, make sure DockerD and Kubernetes are enabled.
+
+Lastly, you need a popular command tool for interacting with Kubernetes clusters called `kubectl`. You can install it via [this page](https://kubernetes.io/docs/tasks/tools/).
+
+If you managed to get one of these configurations done, you should see some options when you run:
+
+```bash
+kubectl config get-contexts
+```
+
+You can choose which cluster you wish to use by running:
+
+```bash
+kubectl config use-context <cluster_name>
+```
+
+Now, create a new folder in your workspace with a name for the project. It is within this folder we will keep all our deployment and configuration files.
+
+## Creating our ConfigMap
+
+We will now create our ConfigMap by defining it in YAML format. Run `nano mongo-config.yaml` and input the following text:
