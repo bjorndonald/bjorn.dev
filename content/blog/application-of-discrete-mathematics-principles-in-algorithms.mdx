@@ -29,7 +29,7 @@ Consider this problem https://leetcode.com/problems/4sum/.
 
 Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
 
-- 0 <= a, b, c, d < n
+- 0 ≤ a, b, c, d &lt; n
 
 - a, b, c, and d are distinct.
 
@@ -48,10 +48,10 @@ When N = 2, Y<sub>t</sub> = [x<sub>i</sub>,x<sub>j</sub>] when x<sub>i</sub> + x
 N cannot be 1 as there is no such thing as a one sum. There has to be two elements in a sum.
 Therefore, N>=2.
 
-Now if input array X is [x<sub>0</sub>,...,x<sub>n</sub>], lets consider a sorted array such that x<sub>0</sub><...x<sub>n</sub>. What would be the minimum possible n values of x that could sum up to target T. The minimum I could think of is an array of n values which were all x<sub>0</sub>. 
+Now if input array X is [x<sub>0</sub>,...,x<sub>n</sub>], lets consider a sorted array such that x<sub>0</sub> {'<'} ... x<sub>n</sub>. What would be the minimum possible n values of x that could sum up to target T. The minimum I could think of is an array of n values which were all x<sub>0</sub>. 
 Then what would be the maximum values of x that could sum up to T. That would be an array of the largest value x<sub>n </sub> in a sorted array. Hence, the following can only be correct for output arrays, 
 N*y<sub>0 </sub>>= T
-N*y<sub>n </sub><= T
+N*y<sub>n </sub> ≤ T
 These two conditions allow us to avoid bad paths in our algorithm.
 
 Here is the best 2 sum algorithm I know in python:
